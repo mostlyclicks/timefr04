@@ -13,3 +13,9 @@
  *= require_self
  *= require_tree .
  */
+
+/*@import 'custom.css.scss';*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
