@@ -1,0 +1,37 @@
+zh-CN:
+  refinery:
+    plugins:
+      bikes:
+        title: Bikes
+    bikes:
+      admin:
+        bikes:
+          actions:
+            create_new: 建立新的 Bike
+            reorder: 对 Bikes 重新排序
+            reorder_done: 对 Bikes 的重新排序结束
+          records:
+            title: Bikes
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Bikes yet. Click "Add New Bike" to add your first bike.
+            no_items_yet: 目前没有 Bikes . 点击 "Add New Bike" 创建一个bike.
+          bike:
+            view_live_html: 查看 bike 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 bike
+            delete: 永久删除 bike
+      bikes:
+        show:
+          other: 其他 Bikes
+  activerecord:
+    attributes:
+      'refinery/bikes/bike':
+        name: Name
+        hero_logo: Hero Logo
+        hero_image: Hero Image
+        hero_background: Hero Background
+        hero_description: Hero Description
+        fork_standard: Fork Standard
+        fork_standard_image: Fork Standard Image
+        fork_aktiv: Fork Aktiv
+        fork_aktiv_image: Fork Aktiv Image

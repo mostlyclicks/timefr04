@@ -27,3 +27,4 @@ gem 'refinerycms-acts-as-indexed', '~> 1.0.0'
 #  gem 'refinerycms-page-images', '~> 2.1.0'
 
 gem 'refinerycms-groups', :path => 'vendor/extensions'
+gem 'refinerycms-bikes', :path => 'vendor/extensions'

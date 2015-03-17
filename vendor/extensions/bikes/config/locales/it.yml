@@ -1,0 +1,35 @@
+it:
+  refinery:
+    plugins:
+      bikes:
+        title: Bikes
+    bikes:
+      admin:
+        bikes:
+          actions:
+            create_new: Aggiungi Nuovo Bike
+            reorder: Riordina Bikes
+            reorder_done: Termina il Riordino di Bikes
+          records:
+            title: Bikes
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Bikes. Clicca "Aggiungi Nuovo Bike" per aggiungere il tuo primo bike.
+          bike:
+            view_live_html: Guarda live questo bike <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo bike
+            delete: Rimuovi per sempre questo bike
+      bikes:
+        show:
+          other: Altri Bikes
+  activerecord:
+    attributes:
+      'refinery/bikes/bike':
+        name: Name
+        hero_logo: Hero Logo
+        hero_image: Hero Image
+        hero_background: Hero Background
+        hero_description: Hero Description
+        fork_standard: Fork Standard
+        fork_standard_image: Fork Standard Image
+        fork_aktiv: Fork Aktiv
+        fork_aktiv_image: Fork Aktiv Image

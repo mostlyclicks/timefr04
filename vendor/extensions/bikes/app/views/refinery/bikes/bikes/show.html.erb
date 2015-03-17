@@ -1,0 +1,75 @@
+<% content_for :body_content_title do %>
+  <%= @bike.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @bike.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Hero Logo</h1>
+    <p>
+      <%= image_fu @bike.hero_logo, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Hero Image</h1>
+    <p>
+      <%= image_fu @bike.hero_image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Hero Background</h1>
+    <p>
+      <%= image_fu @bike.hero_background, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Hero Description</h1>
+    <p>
+      <%=raw @bike.hero_description %>
+    </p>
+  </section>
+  <section>
+    <h1>Fork Standard</h1>
+    <p>
+      <%=raw @bike.fork_standard %>
+    </p>
+  </section>
+  <section>
+    <h1>Fork Standard Image</h1>
+    <p>
+      <%= image_fu @bike.fork_standard_image, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>Fork Aktiv</h1>
+    <p>
+      <%=raw @bike.fork_aktiv %>
+    </p>
+  </section>
+  <section>
+    <h1>Fork Aktiv Image</h1>
+    <p>
+      <%= image_fu @bike.fork_aktiv_image, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="bikes">
+      <% @bikes.each do |bike| %>
+        <li>
+          <%= link_to bike.name, refinery.bikes_bike_path(bike) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,35 @@
+sk:
+  refinery:
+    plugins:
+      bikes:
+        title: Bikes
+    bikes:
+      admin:
+        bikes:
+          actions:
+            create_new: Pridať Bike
+            reorder: Preusporiadať Bikes
+            reorder_done: Koniec radenia Bikes
+          records:
+            title: Bikes
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Bikes. Kliknite na "Pridať Bike" pre pridanie prvého bike.
+          bike:
+            view_live_html: Zobraziť náhľad bike<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť bike
+            delete: Zmazať bike
+      bikes:
+        show:
+          other: Daľšie Bikes
+  activerecord:
+    attributes:
+      'refinery/bikes/bike':
+        name: Name
+        hero_logo: Hero Logo
+        hero_image: Hero Image
+        hero_background: Hero Background
+        hero_description: Hero Description
+        fork_standard: Fork Standard
+        fork_standard_image: Fork Standard Image
+        fork_aktiv: Fork Aktiv
+        fork_aktiv_image: Fork Aktiv Image

@@ -11,7 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150317173252) do
+ActiveRecord::Schema.define(:version => 20150317184658) do
+
+  create_table "refinery_bike_translations", :force => true do |t|
+    t.integer  "refinery_bike_id"
+    t.string   "locale",           :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "name"
+    t.text     "hero_description"
+    t.text     "fork_standard"
+    t.text     "fork_aktiv"
+  end
+
+  add_index "refinery_bike_translations", ["locale"], :name => "index_refinery_bike_translations_on_locale"
+  add_index "refinery_bike_translations", ["refinery_bike_id"], :name => "index_refinery_bike_translations_on_refinery_bike_id"
+
+  create_table "refinery_bikes", :force => true do |t|
+    t.string   "name"
+    t.integer  "hero_logo_id"
+    t.integer  "hero_image_id"
+    t.integer  "hero_background_id"
+    t.text     "hero_description"
+    t.text     "fork_standard"
+    t.integer  "fork_standard_image_id"
+    t.text     "fork_aktiv"
+    t.integer  "fork_aktiv_image_id"
+    t.integer  "position"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
 
   create_table "refinery_group_translations", :force => true do |t|
     t.integer  "refinery_group_id"

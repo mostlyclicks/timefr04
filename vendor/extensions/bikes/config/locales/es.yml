@@ -1,0 +1,36 @@
+es:
+  refinery:
+    plugins:
+      bikes:
+        title: Bikes
+#        article: masculino/femenino
+    bikes:
+      admin:
+        bikes:
+          actions:
+            create_new: Crear nuevo bike
+            reorder: Reordenar bikes
+            reorder_done: Reordenación de bikes completada
+          records:
+            title: Bikes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay bikes todavía. Pulsa en "Crear nuevo Bike" para crear tu primer bike.
+          bike:
+            view_live_html: Ver este bike como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este bike
+            delete: Borrar este bike para siempre
+      bikes:
+        show:
+          other: Otros bikes
+  activerecord:
+    attributes:
+      'refinery/bikes/bike':
+        name: Name
+        hero_logo: Hero Logo
+        hero_image: Hero Image
+        hero_background: Hero Background
+        hero_description: Hero Description
+        fork_standard: Fork Standard
+        fork_standard_image: Fork Standard Image
+        fork_aktiv: Fork Aktiv
+        fork_aktiv_image: Fork Aktiv Image

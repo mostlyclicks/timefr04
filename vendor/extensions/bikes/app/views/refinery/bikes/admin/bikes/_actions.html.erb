@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Bikes::Admin::BikesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.bikes_admin_bikes_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_bikes_admin_bike_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Bikes::Admin::BikesController.sortable? && ::Refinery::Bikes::Bike.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Bikes"),
+                 refinery.bikes_admin_bikes_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Bikes"),
+                 refinery.bikes_admin_bikes_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

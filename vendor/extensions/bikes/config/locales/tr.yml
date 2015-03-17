@@ -1,0 +1,35 @@
+tr:
+  refinery:
+    plugins:
+      bikes:
+        title: Bikes
+    bikes:
+      admin:
+        bikes:
+          actions:
+            create_new: Yeni Ekle Bike
+            reorder: Tekrar sirala Bikes
+            reorder_done: Tekrar siralama tamamlandiBikes
+          records:
+            title: Bikes
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Bikes yok henuz.  Tikla "Yeni Ekle Bike" eklemek senin ilk bike.
+          bike:
+            view_live_html: Bunu canlu bike goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle bike
+            delete: Bunu Sil bike sonsuza dek
+      bikes:
+        show:
+          other: Diger Bikes
+  activerecord:
+    attributes:
+      'refinery/bikes/bike':
+        name: Name
+        hero_logo: Hero Logo
+        hero_image: Hero Image
+        hero_background: Hero Background
+        hero_description: Hero Description
+        fork_standard: Fork Standard
+        fork_standard_image: Fork Standard Image
+        fork_aktiv: Fork Aktiv
+        fork_aktiv_image: Fork Aktiv Image
