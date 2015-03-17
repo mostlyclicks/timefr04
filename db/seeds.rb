@@ -8,3 +8,6 @@
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
+
+# Added by Refinery CMS Groups extension
+Refinery::Groups::Engine.load_seed
