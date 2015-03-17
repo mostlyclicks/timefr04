@@ -33,4 +33,21 @@ Refinery::Core::Engine.routes.draw do
     end
   end
 
+
+  # Frontend routes
+  namespace :bikes do
+    resources :features, :only => [:index, :show]
+  end
+
+  # Admin routes
+  namespace :bikes, :path => '' do
+    namespace :admin, :path => "#{Refinery::Core.backend_route}/bikes" do
+      resources :features, :except => :show do
+        collection do
+          post :update_positions
+        end
+      end
+    end
+  end
+
 end

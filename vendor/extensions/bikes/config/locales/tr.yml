@@ -1,12 +1,29 @@
 tr:
   refinery:
     plugins:
+      features:
+        title: Features
       colors:
         title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        features:
+          actions:
+            create_new: Yeni Ekle Feature
+            reorder: Tekrar sirala Features
+            reorder_done: Tekrar siralama tamamlandiFeatures
+          records:
+            title: Features
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Features yok henuz.  Tikla "Yeni Ekle Feature"
+              eklemek senin ilk feature.
+          feature:
+            view_live_html: Bunu canlu feature goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle feature
+            delete: Bunu Sil feature sonsuza dek
         colors:
           actions:
             create_new: Yeni Ekle Color
@@ -37,6 +54,9 @@ tr:
               acar)</em>
             edit: Bunu Duzenle bike
             delete: Bunu Sil bike sonsuza dek
+      features:
+        show:
+          other: Diger Features
       colors:
         show:
           other: Diger Colors
@@ -45,6 +65,10 @@ tr:
           other: Diger Bikes
   activerecord:
     attributes:
+      refinery/bikes/feature:
+        title: Title
+        description: Description
+        image: Image
       refinery/bikes/color:
         name: Name
         image: Image

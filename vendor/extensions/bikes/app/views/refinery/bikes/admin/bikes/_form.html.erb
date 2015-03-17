@@ -67,7 +67,16 @@
     <%= f.fields_for :colors do |j| %>
       <%= render 'refinery/bikes/admin/bikes/color_fields', :f => j %>
     <% end %>
-    <%= link_to_add_fields 'Add color', f, :colors %>
+    <%= link_to_add_fields 'Add Color', f, :colors %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :features %>
+    <%= f.fields_for :features do |j| %>
+      <%= render 'refinery/bikes/admin/bikes/feature_fields', :f => j %>
+    <% end %>
+    <%= link_to_add_fields 'Add Feature', f, :features %>
   </div>
 
 
