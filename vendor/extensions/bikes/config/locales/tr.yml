@@ -1,10 +1,27 @@
 tr:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Yeni Ekle Color
+            reorder: Tekrar sirala Colors
+            reorder_done: Tekrar siralama tamamlandiColors
+          records:
+            title: Colors
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Colors yok henuz.  Tikla "Yeni Ekle Color"
+              eklemek senin ilk color.
+          color:
+            view_live_html: Bunu canlu color goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
+            edit: Bunu Duzenle color
+            delete: Bunu Sil color sonsuza dek
         bikes:
           actions:
             create_new: Yeni Ekle Bike
@@ -13,17 +30,25 @@ tr:
           records:
             title: Bikes
             sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
-            no_items_yet: Herhangi bir Bikes yok henuz.  Tikla "Yeni Ekle Bike" eklemek senin ilk bike.
+            no_items_yet: Herhangi bir Bikes yok henuz.  Tikla "Yeni Ekle Bike" eklemek
+              senin ilk bike.
           bike:
-            view_live_html: Bunu canlu bike goruntule <br/><em>(yeni bir pencerede acar)</em>
+            view_live_html: Bunu canlu bike goruntule <br/><em>(yeni bir pencerede
+              acar)</em>
             edit: Bunu Duzenle bike
             delete: Bunu Sil bike sonsuza dek
+      colors:
+        show:
+          other: Diger Colors
       bikes:
         show:
           other: Diger Bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

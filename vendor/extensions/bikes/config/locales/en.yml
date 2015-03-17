@@ -1,10 +1,26 @@
 en:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Add New Color
+            reorder: Reorder Colors
+            reorder_done: Done Reordering Colors
+          records:
+            title: Colors
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Colors yet. Click "Add New Color" to add your
+              first color.
+          color:
+            view_live_html: View this color live <br/><em>(opens in a new window)</em>
+            edit: Edit this color
+            delete: Remove this color forever
         bikes:
           actions:
             create_new: Add New Bike
@@ -13,17 +29,24 @@ en:
           records:
             title: Bikes
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Bikes yet. Click "Add New Bike" to add your first bike.
+            no_items_yet: There are no Bikes yet. Click "Add New Bike" to add your
+              first bike.
           bike:
             view_live_html: View this bike live <br/><em>(opens in a new window)</em>
             edit: Edit this bike
             delete: Remove this bike forever
+      colors:
+        show:
+          other: Other Colors
       bikes:
         show:
           other: Other Bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

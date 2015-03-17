@@ -2,8 +2,12 @@ module Refinery
   module Bikes
     class Bike < Refinery::Core::BaseModel
       self.table_name = 'refinery_bikes'
+      has_many :colors
 
-      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position
+      accepts_nested_attributes_for :colors, allow_destroy: true
+
+      attr_accessible :name, :hero_logo_id, :hero_image_id, :hero_background_id, :hero_description, :fork_standard, :fork_standard_image_id, :fork_aktiv, :fork_aktiv_image_id, :position, :colors_attributes
+
 
       translates :name, :hero_description, :fork_standard, :fork_aktiv
 

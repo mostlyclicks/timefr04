@@ -1,10 +1,26 @@
 fr:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Color
+            reorder: Réordonner les Colors
+            reorder_done: Fin de réordonnancement des Colors
+          records:
+            title: Colors
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Color. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Color" pour créer votre premi(er/ère) color.
+          color:
+            view_live_html: Voir ce(t/tte) color <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) color
+            delete: Supprimer définitivement ce(t/tte) color
         bikes:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Bike
@@ -12,18 +28,25 @@ fr:
             reorder_done: Fin de réordonnancement des Bikes
           records:
             title: Bikes
-            sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Bike. Cliquer sur "Créer un(e) nouve(au/l/lle) Bike" pour créer votre premi(er/ère) bike.'
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Bike. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Bike" pour créer votre premi(er/ère) bike.
           bike:
             view_live_html: Voir ce(t/tte) bike <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) bike
             delete: Supprimer définitivement ce(t/tte) bike
+      colors:
+        show:
+          other: Autres Colors
       bikes:
         show:
           other: Autres Bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

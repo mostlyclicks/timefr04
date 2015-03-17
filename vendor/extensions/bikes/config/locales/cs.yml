@@ -1,10 +1,26 @@
 cs:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Přidat Color
+            reorder: Řadit Colors
+            reorder_done: Konec řazení Colors
+          records:
+            title: Colors
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Colors. Zvolte "Přidat Color"
+              pro přidání prvního color.
+          color:
+            view_live_html: Zobrazit náhled color<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit color
+            delete: Smazat color
         bikes:
           actions:
             create_new: Přidat Bike
@@ -13,17 +29,24 @@ cs:
           records:
             title: Bikes
             sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Bikes. Zvolte "Přidat Bike" pro přidání prvního bike.
+            no_items_yet: Zatím nebyly vytvořeny žádné Bikes. Zvolte "Přidat Bike"
+              pro přidání prvního bike.
           bike:
             view_live_html: Zobrazit náhled bike<br/><em>(otevře se v novém okně)</em>
             edit: Upravit bike
             delete: Smazat bike
+      colors:
+        show:
+          other: Další Colors
       bikes:
         show:
           other: Další Bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

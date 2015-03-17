@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150317184658) do
+ActiveRecord::Schema.define(:version => 20150317200349) do
 
   create_table "refinery_bike_translations", :force => true do |t|
     t.integer  "refinery_bike_id"
@@ -40,6 +40,26 @@ ActiveRecord::Schema.define(:version => 20150317184658) do
     t.integer  "position"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+  end
+
+  create_table "refinery_bikes_color_translations", :force => true do |t|
+    t.integer  "refinery_bikes_color_id"
+    t.string   "locale",                  :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "name"
+  end
+
+  add_index "refinery_bikes_color_translations", ["locale"], :name => "index_refinery_bikes_color_translations_on_locale"
+  add_index "refinery_bikes_color_translations", ["refinery_bikes_color_id"], :name => "index_a719a745ed36de657d91a0489fbd98da6ab1c020"
+
+  create_table "refinery_bikes_colors", :force => true do |t|
+    t.string   "name"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "bike_id"
   end
 
   create_table "refinery_group_translations", :force => true do |t|

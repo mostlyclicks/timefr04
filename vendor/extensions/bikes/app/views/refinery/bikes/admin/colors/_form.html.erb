@@ -1,0 +1,26 @@
+<%= form_for [refinery, :bikes_admin, @color] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @color,
+              :include_object_name => true %>
+
+  <%= render '/refinery/admin/locale_picker',
+              :current_locale => Globalize.locale %>
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :image -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :image_id,
+               :image => @color.image,
+               :toggle_image_display => false -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.colors.admin.colors.color'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @color.name) -%>
+<% end -%>

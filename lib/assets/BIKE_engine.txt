@@ -1,3 +1,7 @@
 BIKE_engine.txt
 
  rails g refinery:engine bike name:string hero_logo:image hero_image:image hero_background:image hero_description:text fork_standard:text fork_standard_image:image fork_aktiv:text fork_aktiv_image:image --i18n name hero_description fork_standard fork_aktiv
+
+ rails g refinery:engine color name:string image:image --extension bikes --namespace bikes --i18n name
+
+ rails g refinery:engine features name:string description:text image:image --extension bikes --namespace bikes --i18n name description

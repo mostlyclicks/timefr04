@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Nieuwe Color toevoegen
+            reorder: De volgorde van de Colors wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Color-volgorde
+          records:
+            title: Colors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Colors. Druk op 'Nieuwe Color toevoegen'
+              om de eerste toe te voegen.
+          color:
+            view_live_html: Deze color op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
+            edit: Bewerk deze color
+            delete: Deze color definitief verwijderen
         bikes:
           actions:
             create_new: Nieuwe Bike toevoegen
@@ -13,17 +30,25 @@ nl:
           records:
             title: Bikes
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Bikes. Druk op 'Nieuwe Bike toevoegen' om de eerste toe te voegen.
+            no_items_yet: Er zijn nog geen Bikes. Druk op 'Nieuwe Bike toevoegen'
+              om de eerste toe te voegen.
           bike:
-            view_live_html: Deze bike op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            view_live_html: Deze bike op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
             edit: Bewerk deze bike
             delete: Deze bike definitief verwijderen
+      colors:
+        show:
+          other: Andere Colors
       bikes:
         show:
           other: Andere Bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

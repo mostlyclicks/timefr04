@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      colors:
+        title: Colors
       bikes:
         title: Bikes
-#        article: masculino/femenino
     bikes:
       admin:
+        colors:
+          actions:
+            create_new: Crear nuevo color
+            reorder: Reordenar colors
+            reorder_done: Reordenación de colors completada
+          records:
+            title: Colors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay colors todavía. Pulsa en "Crear nuevo Color" para
+              crear tu primer color.
+          color:
+            view_live_html: Ver este color como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este color
+            delete: Borrar este color para siempre
         bikes:
           actions:
             create_new: Crear nuevo bike
@@ -14,17 +30,25 @@ es:
           records:
             title: Bikes
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay bikes todavía. Pulsa en "Crear nuevo Bike" para crear tu primer bike.
+            no_items_yet: No hay bikes todavía. Pulsa en "Crear nuevo Bike" para crear
+              tu primer bike.
           bike:
-            view_live_html: Ver este bike como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este bike como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
             edit: Editar este bike
             delete: Borrar este bike para siempre
+      colors:
+        show:
+          other: Otros colors
       bikes:
         show:
           other: Otros bikes
   activerecord:
     attributes:
-      'refinery/bikes/bike':
+      refinery/bikes/color:
+        name: Name
+        image: Image
+      refinery/bikes/bike:
         name: Name
         hero_logo: Hero Logo
         hero_image: Hero Image

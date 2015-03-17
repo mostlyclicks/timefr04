@@ -62,6 +62,15 @@
                :toggle_image_display => false -%>
   </div>
 
+  <div class="field">
+    <%= f.label :colors %>
+    <%= f.fields_for :colors do |j| %>
+      <%= render 'refinery/bikes/admin/bikes/color_fields', :f => j %>
+    <% end %>
+    <%= link_to_add_fields 'Add color', f, :colors %>
+  </div>
+
+
   <%= render '/refinery/admin/form_actions', :f => f,
              :continue_editing => false,
              :delete_title => t('delete', :scope => 'refinery.bikes.admin.bikes.bike'),

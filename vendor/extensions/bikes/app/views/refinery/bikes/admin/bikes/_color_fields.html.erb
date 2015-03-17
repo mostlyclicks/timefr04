@@ -1,0 +1,12 @@
+<fieldset class='nested' data-nested-item='true'>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= render 'refinery/admin/image_picker', f: f, field: :image_id, image: f.object.image %>
+  </div>
+  <%= link_to_remove_field 'Remove Color', f %>
+
+</fieldset>

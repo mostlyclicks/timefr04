@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="colors">
+    <% @colors.each do |color| %>
+      <li>
+        <%= link_to color.name, refinery.bikes_color_path(color) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
