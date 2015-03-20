@@ -1,0 +1,82 @@
+ @import 'base.scss';
+
+ #l2-bike {
+  padding:20px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position-y:200px;
+  background-color:#fafafa;
+  min-height:100vh;
+  text-align:center;
+  #bike-main-txt {
+   //@extend .l2-main-txt;
+   border-top:2px solid $time-red;
+   img {
+    margin:0 auto;
+   }
+ }
+   h3 {
+     @include header-style(20px, 100, $black-med);
+     display:inline-block;
+     margin:0 .25em;
+
+     //@extend .l2-h3-xs;
+   }
+   .lead {
+   @include text-style(16px, 200, $black-med);
+     //@extend .l2-main-lead;
+     text-align:left;
+     padding:20px 0px;
+
+   }
+   #bike-img img {@include bike-hero-style(0px, 100%);}
+ }
+
+
+ #aktiv-choice {
+  padding:80px 20px;
+  p {@include text-style(16px, 200, $black-med);}
+  #or h1 {
+   display:block;
+   font-size:35px;
+   // font-weight:$light-weight;
+   background-color:#000;
+   color:$time-plasma;
+   height:80px;
+   width:80px;
+   line-height:70px;
+   margin:0 auto;
+   border-radius:50%;
+   border:3px solid lighten(#000, 50%);
+   }
+ }
+
+
+#what-is-aktiv {
+   padding:20px 20px;
+   background-image:url(AKTIV-bg.png);
+   background-color:black;
+   background-repeat:no-repeat;
+   .padding-left {
+     padding-left:30px;
+   }
+   h1 {
+     margin-top:1em;
+     @include header-style(30px, 100, $time-red);
+   }
+   p.lead {color:#fff;letter-spacing:.05em;}
+   img {margin:10px auto 0px auto;}
+   a {color:$time-red;}
+ }
+
+
+ #l2-bike-gallery {
+  padding:40px 0;
+   h1 {@include header-style(48px, 100, $time-red);}
+   img {margin:20px auto 40px auto;}
+   .carousel-caption {
+    color:darken($black-light, 80%) !important;
+     padding-bottom:0px !important;
+     bottom:-40px;
+  }
+ }

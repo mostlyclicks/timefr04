@@ -1,6 +1,114 @@
-<% content_for :body_content_title do %>
-  <%= @bike.name %>
-<% end %>
+<%# content_for :body_content_title do %>
+  <%#= @bike.name %>
+<%# end %>
+
+<style>
+  #l2-bike {background-image:url(<%= @bike.hero_background.url %>);}
+</style>
+
+
+<!-- L2 BIKE INTRO -->
+<section class="show" id="l2-bike">
+  <div class="container">
+    <%#= render '/refinery/content_page' %>
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-lg-8" id="bike-img">
+        <%#= image_fu @bike.hero_image, '1200x765c', class: 'img-responsive' %>
+        <%= image_tag @bike.hero_image.url, class: 'img-responsive1' %>
+      </div>
+      <div class="col-md-4 col-lg-4" id="bike-main-txt">
+        <%= image_tag @bike.hero_logo.url, class: 'img-responsive' %>
+        <%=raw @bike.hero_description %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- L2 BIKE AKTIV -->
+<section id="aktiv-choice">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <%#= image_tag 'Skylon-plasma-frame.png', class: 'img-responsive' %>
+        <%= image_tag @bike.fork_standard_image.url, class: 'img-responsive' %>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <%#= image_tag 'Skylon-AKTIV-plasma-frame.png', class: 'img-responsive' %>
+        <%= image_tag @bike.fork_aktiv_image.url, class: 'img-responsive' %>
+      </div>
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+        <%=raw @bike.fork_standard %>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2 text-center" id="or">
+        <h1>or</h1>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <%=raw @bike.fork_aktiv %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= render 'shared/what_is_aktiv' %>
+
+
+<section id="l2-bike-gallery">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+      <h1 class="text-center">Gallery</h1>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <% @bike.colors.each_with_index do |c, index| %>
+            <li data-target="#carousel-example-generic" data-slide-to="<%= index %>" class="<% if index == 0 %>active<% end %>" style="background-color:#cdcdcd;"></li>
+            <% end %>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+
+            <% @bike.colors.each_with_index do |c, index| %>
+
+            <div class="item <% if index == 0 %>active<% end %>" >
+              <%= image_tag c.image.url, alt: c.name, class: 'img-responsive gallery-img' %>
+              <div class="carousel-caption">
+                <%= c.name %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="fa fa-angle-left fa-2x"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="fa fa-angle-right fa-2x"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <% content_for :body do %>
   <section>
@@ -12,19 +120,19 @@
   <section>
     <h1>Hero Logo</h1>
     <p>
-      <%= image_fu @bike.hero_logo, nil %>
+      <%= image_fu @bike.hero_logo, '200x200c' %>
     </p>
   </section>
   <section>
     <h1>Hero Image</h1>
     <p>
-      <%= image_fu @bike.hero_image, nil %>
+      <%= image_fu @bike.hero_image, '200x200c' %>
     </p>
   </section>
   <section>
     <h1>Hero Background</h1>
     <p>
-      <%= image_fu @bike.hero_background, nil %>
+      <%= image_fu @bike.hero_background, '200x200c' %>
     </p>
   </section>
   <section>

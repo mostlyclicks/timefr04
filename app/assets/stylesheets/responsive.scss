@@ -1,0 +1,266 @@
+@import 'base.scss';
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  //body {border-top:5px solid blue;}
+  //HOME
+  #top {min-height:720px;}
+  //MADE IN FRANCE
+  #made-in-france {
+    min-height:700px;
+    @include background-style(cover, 50%, 50%, no-repeat);
+    .row {
+      padding:40px 0;
+      background-color:rgba(0,0,0,.6) !important;
+      p {font-size:14px;margin-top:1em;}
+      h3 {@include text-style(24px, 200, $time-red);text-align:center;}
+    }
+  }
+  #bikes-frames-feature {
+    min-height:600px;
+    #home-bike-bg img {@include home-bike-feature(absolute, -1, 110px, -250px, nil, nil)};
+  }
+  #l2-bike {
+    min-height:700px;
+    background-position-y:160px;
+    #bike-img {border-bottom:2px solid $time-red;}
+    #bike-main-txt {
+      border-top:0px solid $time-red;
+      p {
+        padding:20px 20px;
+      }
+    }
+  }
+  #aktiv-biker {
+  .row {background:none;}
+   min-height:1000px;
+   padding:20px;
+   background-image:url(AKTIV-2-white.jpg);
+   background-position-x:-715px;
+   padding-top:180px;
+   padding-bottom:40px;
+   background-size:cover;
+     p {
+       @include header-style(16px, 200, rgba(0,0,0,.6));
+       padding:10px;
+     }
+     h3 {@include header-style(24px, 100, rgba(0,0,0,1));
+      padding:10px;
+     }
+     h2 {
+      padding:10px;
+     }
+  }
+  #rtm-intro {
+    min-height:700px;
+   p {
+       margin-top:20px;
+       @include header-style(16px, 200, rgba(255,255,255,.8));
+       background-color:rgba(0,0,0,.2);
+       text-shadow:1px 1px 8px rgba(0,0,0,.5);
+       padding:20px;
+   }
+   a {color:#fff;text-shadow:1px 1px 8px rgba(0,0,0,.2);}
+ }
+  #rtm-weaving {
+    img {padding-right:40px;padding-top:20px;}
+  }
+
+  #rtm-resin-injection {
+    img {padding-left:40px;padding-top:20px;}
+  }
+
+ #pedal-xpresso-hero {
+  min-height:700px;
+  #pedal-main-txt {
+    min-height:700px;
+  }
+ }
+
+  #pedal-atac-hero {
+  min-height:700px;
+  #pedal-main-txt {
+    min-height:700px;
+  }
+ }
+
+ #dealer-top {
+   // background-position-y:-100px;
+ }
+ #dealers {
+   .dealer-list {
+    height:9em;
+    margin-top:20px;
+   }
+ }
+
+.page-wrap {
+   min-height: 100%;
+   /* equal to footer height */
+   margin-bottom: -450px !important; 
+ }
+
+  .site-footer, .page-wrap:after {
+   /* .push must be the same height as footer */
+   height: 450px !important; 
+ }
+
+ #contact-sidebar {
+  #time-2015-catalog {
+    width:20%;
+  }
+ }
+
+  #accessories-top {
+    min-height:400px;
+    padding:0;
+    background-image:url(accessories.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position-y:50%;
+  }
+
+  .sub-head {
+    margin-bottom:40px;
+  }
+
+
+  #handlebars {
+    padding:20px;
+    h1 {@include header-style(48px, 100, $time-red)}
+    h2 {@include header-style(24px, 100, $time-red)}
+    //border:1px solid red;
+
+  .accessory-title {
+    border-bottom:0px solid $time-red;
+    //border-right:1px solid black;
+  }
+  .accessory-desc {
+    border-left:2px solid $time-red !important;
+    p {padding:20px 0px 20px 40px;}
+  }
+
+  }
+
+  #stems {
+    .accessory-title {
+      border-bottom:0px solid $time-red;
+    }
+    .accessory-desc {
+      border-left:2px solid $time-red;
+      p {padding:20px 0px 20px 40px;}
+    }
+  }
+
+  #email-subscription {
+    background-size:100%;
+    background-position-y:48%;
+    background-position-x:50%;
+  }
+
+}
+
+
+
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ //body {border-top:5px solid green;}
+  #top {
+    min-height:850px;
+    h1 {font-size:48px !important;margin:48px 0 !important;}
+    h2 {font-size:18px;font-weight:200;}
+    h3 {font-size:18px;}
+  }
+
+  #bikes-frames-feature {
+    #home-bike-bg img {@include home-bike-feature(absolute, -1, 120px, -270px, nil, nil)};
+  }
+  #aktiv {
+      @include gradient-bg(#000, #fff, 80%);//$start-color, $end-color, $gradient-point
+  }
+  #aktiv-biker {
+   padding-top:200px;
+   background-position-x:-500px;
+   padding-bottom:40px;
+   }
+
+  #l2-bike {
+    background-position-y:0px;
+    h3 {
+     @include header-style(24px, 100, $black-med);
+     display:inline;
+     margin:0 .15em;
+
+     //@extend .l2-h3-xs;
+   }
+    #bike-img img {@include bike-hero-style(-520px, 210%);}
+    #bike-img {border-bottom:0px solid $time-red;}
+    #bike-main-txt {
+      border-left:2px solid $time-red;  
+    }
+  }
+  #contact-sidebar {
+    #time-2015-catalog {
+      width:20%;
+    }
+  }
+  #stems, #cleats {
+    img {padding:20px;}
+  }
+
+  .page-wrap {
+   min-height: 100%;
+   /* equal to footer height */
+   margin-bottom: -320px !important; 
+ }
+
+  .site-footer, .page-wrap:after {
+   /* .push must be the same height as footer */
+   height: 320px !important; 
+ }
+
+}
+
+
+
+
+
+
+
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  //body {border-top:5px solid grey;}
+  #bikes-frames-feature {
+    #home-bike-bg img {@include home-bike-feature(absolute, -1, 240px, -100px, nil, nil)};
+  }
+  #aktiv {
+    @include gradient-bg(#000, #fff, 70%);//$start-color, $end-color, $gradient-point
+  }
+  #aktiv-biker {
+   
+   background-position-x:-200px;
+   }
+  #l2-bike {
+    #bike-img img {width:170% !important;height:170% !important;margin-left:-410px !important;}
+  }
+  #contact-sidebar {
+    #time-2015-catalog {
+      width:50%;
+      margin:0 0 10px 10px;
+    }
+ }
+ #email-subscription {
+  height:500px;
+  #subscribe-form {
+    padding-top:87px;
+    padding-left:20px;
+  }
+
+ }
+}
