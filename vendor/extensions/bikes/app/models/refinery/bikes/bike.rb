@@ -2,6 +2,8 @@ module Refinery
   module Bikes
     class Bike < Refinery::Core::BaseModel
       self.table_name = 'refinery_bikes'
+      extend FriendlyId
+        friendly_id :name, :use => [:slugged]
       has_many :colors
       has_many :features
 
