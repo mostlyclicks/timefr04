@@ -57,6 +57,30 @@
 
 <%= render 'shared/what_is_aktiv' %>
 
+<section id="l2-bike-features">
+
+
+<h1 class="text-center"><%= @bike.name %> Features</h1>
+
+<div class="container">
+  <div class="row">
+    <% @bike.features.each do |f| %>
+      <div class="col-sm-3 text-center bike-feature">
+          
+          <%= image_tag f.image.url, class: 'img-responsive img-circle' %>
+          <h2><%= f.title %></h2>
+          <p><%= f.description.html_safe %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+</section>
+
+
+
+
+
 
 <section id="l2-bike-gallery">
   <div class="container-fluid">
@@ -98,6 +122,84 @@
   </div>
 </section>
 
+
+<section id="l2-geometry">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <%= image_tag 'TIME-2015-geometry.png', class: 'img-responsive center-it' %>
+      </div>
+      <div class="col-lg-7">
+        <h3><%= @bike.name %> Geometry</h3>
+        <% if @bike.name == 'Skylon' %>
+          <%= render 'shared/skylon_geo_grid' %>
+        <% elsif @bike.name == 'Izon' %>
+          <%= render 'shared/izon_geo_grid' %>
+        <% else %>
+          <%= render 'shared/fluidity_geo_grid' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="groups">
+<%# if @bike.name == 'Skylon' %>
+  
+<%# elsif @bike.name == 'Izon' %>
+
+<%# else %>
+
+<%# end %>
+
+<div class="container">
+  <h1 class="text-center">Component Groups</h1>
+  <div class="row">
+    <% @groups.each do |d| %>
+      <div class="col-md-6 group">
+        <table class="table table-striped table-bordered table-condensed">
+            <col width="30%">
+            <col width="70%">
+          <tr>
+            <th colspan="2"><%= d.name %></th>
+          </tr>
+          <tr>
+            <td>Shift Levers</td>
+            <td><%= d.shift_levers %></td>
+          </tr>
+          <tr>
+            <td>Brakes</td>
+            <td><%= d.brakes %></td>
+          </tr>
+          <tr>
+            <td>Front Derailleur</td>
+            <td><%= d.front_derailleur %></td>
+          </tr>
+          <tr>
+            <td>Rear Derailleur</td>
+            <td><%= d.rear_derailleur %></td>
+          </tr>
+          <tr>
+            <td>Crankset</td>
+            <td><%= d.crankset %></td>
+          </tr>
+          <tr>
+            <td>Casssette</td>
+            <td><%= d.cassette %></td>
+          </tr>
+          <tr>
+            <td>Chain</td>
+            <td><%= d.chain %></td>
+          </tr>
+        </table>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+</section>
 
 
 
@@ -180,4 +282,4 @@
   </aside>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>

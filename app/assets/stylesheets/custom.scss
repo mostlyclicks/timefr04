@@ -80,3 +80,26 @@
      bottom:-40px;
   }
  }
+
+
+  #l2-bike-features {
+   padding:80px 10px;
+   background-color:rgba(225,225,225,.1);
+   h1 {@include header-style(48px, 100, $time-red);}
+   h2 {@include header-style(56px, 700, $time-red);}
+   img {
+     border:5px solid rgba(0,0,0,.1);
+     margin-bottom:15px;
+   }
+   .bike-feature {
+     padding:20px;
+   }
+
+ }
+
+ #groups {
+  .group {
+    padding:0px 10px!important;
+    
+  }
+ }

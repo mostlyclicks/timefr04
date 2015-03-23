@@ -16,6 +16,7 @@ module Refinery
             :title => 'name'
           }
           plugin.menu_match = %r{refinery/bikes/colors(/.*)?$}
+          plugin.hide_from_menu = true
         end
       end
 

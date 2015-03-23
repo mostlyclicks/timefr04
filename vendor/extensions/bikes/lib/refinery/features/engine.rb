@@ -15,6 +15,7 @@ module Refinery
             :class_name => :'refinery/bikes/feature'
           }
           plugin.menu_match = %r{refinery/bikes/features(/.*)?$}
+          plugin.hide_from_menu = true
         end
       end
 
